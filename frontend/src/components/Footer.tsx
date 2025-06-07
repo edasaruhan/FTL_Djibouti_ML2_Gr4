@@ -8,9 +8,10 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-3">
-              CV Screener
-            </h3>
+            <div className="flex items-center gap-2">
+              <img src="/logo.png" alt="CVision Logo" className="h-10 w-auto" />
+              <h3 className="text-lg font-semibold text-white">CVision</h3>
+            </div>
             <p className="text-sm">
               Revolutionizing the hiring process with AI-powered CV analysis.
             </p>
@@ -77,9 +78,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-slate-700 pt-8 text-center text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} CV Screener. All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} CVision. All rights reserved.</p>
           <p className="mt-1">
             Designed with <span className="text-red-500">&hearts;</span> by Your
             Team/Name

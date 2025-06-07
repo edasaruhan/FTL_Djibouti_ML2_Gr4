@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button"; // Assuming Button is for potential CTA
-import { LogIn, UserPlus, LayoutDashboard, HomeIcon } from "lucide-react"; // Added icons
+import { LogIn, UserPlus, LayoutDashboard } from "lucide-react"; // Added icons
 
 const Navbar: React.FC = () => {
   // Placeholder for authentication status
@@ -14,23 +14,10 @@ const Navbar: React.FC = () => {
           to="/"
           className="text-2xl font-bold text-primary flex items-center"
         >
-          <HomeIcon size={28} className="mr-2" /> {/* Changed to an icon */}
-          CV Screener
+          <img src="/logo.png" alt="CVision Logo" className="h-10 w-auto" />
+          CVision
         </Link>
         <div className="flex items-center space-x-2 md:space-x-4">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `flex items-center px-3 py-2 rounded-md text-sm font-medium ${
-                isActive
-                  ? "bg-slate-100 text-primary"
-                  : "text-slate-700 hover:bg-slate-50 hover:text-primary"
-              }`
-            }
-          >
-            Home
-          </NavLink>
-
           {isAuthenticated ? (
             <NavLink
               to="/dashboard"
@@ -60,7 +47,7 @@ const Navbar: React.FC = () => {
                 <LogIn size={18} className="mr-1 md:mr-2" />
                 Login
               </NavLink>
-              <Button asChild size="sm">
+              <Button asChild>
                 <Link to="/register" className="flex items-center">
                   <UserPlus size={18} className="mr-1 md:mr-2" />
                   Sign Up

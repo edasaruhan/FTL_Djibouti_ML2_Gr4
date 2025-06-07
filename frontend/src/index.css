@@ -1,5 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/rubik/400.css";
+@import "@fontsource/rubik/500.css";
+@import "@fontsource/rubik/600.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,6 +50,9 @@
 }
 
 :root {
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-heading: "Poppins", system-ui, sans-serif;
+  --font-button: "Rubik", system-ui, sans-serif;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -116,5 +127,21 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  button,
+  a,
+  .btn,
+  .button {
+    font-family: var(--font-button);
   }
 }

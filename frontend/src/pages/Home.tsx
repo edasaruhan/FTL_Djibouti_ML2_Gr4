@@ -12,16 +12,20 @@ const Home: React.FC = () => {
       <Navbar />
 
       <main className="flex-1 overflow-x-hidden">
-        {/* Hero Section - Modern style with gradient */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white">
-          {/* Background dots/grid pattern */}
-          <div className="absolute inset-0 opacity-10">
+        {/* Hero Section - White background with purple grid */}
+        <section className="relative overflow-hidden bg-white text-indigo-900">
+          {/* Grid pattern background */}
+          <div className="absolute inset-0">
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 opacity-[0.15]"
               style={{
-                backgroundImage:
-                  "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                backgroundImage: `
+                  linear-gradient(to bottom, rgba(124, 58, 237, 0.5) 1px, transparent 1px),
+                  linear-gradient(to right, rgba(124, 58, 237, 0.5) 1px, transparent 1px)
+                `,
                 backgroundSize: "30px 30px",
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%)",
               }}
             ></div>
           </div>
@@ -33,17 +37,17 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-slate-800"
               >
                 Find Your Perfect{" "}
-                <span className="text-cyan-400">Career Match</span>
+                <span className="text-indigo-600">Career Match</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-slate-200 px-2 font-light"
+                className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-slate-600 px-2 font-light"
               >
                 Our AI-powered platform matches job seekers with their ideal
                 roles and helps employers find the perfect candidates.
@@ -55,13 +59,13 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2"
               >
-                <Button className="bg-cyan-500 hover:bg-cyan-600 text-white border-0 rounded-full px-6 sm:px-8 py-2 sm:py-6 text-sm sm:text-base mt-3 sm:mt-0 font-['Rubik'] font-medium tracking-wide">
+                <Button className="bg-indigo-600 hover:bg-indigo-700 text-white border-0 rounded-full px-6 sm:px-8 py-2 sm:py-6 text-sm sm:text-base mt-3 sm:mt-0 font-['Rubik'] font-medium tracking-wide">
                   <Link to="/register">Get Started</Link>
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  {/* <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" /> */}
                 </Button>
                 <Button
                   variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white/10 rounded-full px-6 sm:px-8 py-2 sm:py-6 text-sm sm:text-base mt-3 sm:mt-0 font-['Rubik'] font-medium tracking-wide"
+                  className="bg-transparent border-indigo-600 text-indigo-600 hover:bg-indigo-50 rounded-full px-6 sm:px-8 py-2 sm:py-6 text-sm sm:text-base mt-3 sm:mt-0 font-['Rubik'] font-medium tracking-wide"
                 >
                   <Link to="/demo">Watch Demo</Link>
                 </Button>
@@ -74,27 +78,27 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto px-2"
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-5 text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">
+                <div className="bg-indigo-50 rounded-lg p-3 sm:p-5 text-center shadow-sm">
+                  <div className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1">
                     95%
                   </div>
-                  <div className="text-xs sm:text-sm text-slate-200 font-light">
+                  <div className="text-xs sm:text-sm text-slate-600 font-light">
                     Matching Accuracy
                   </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-5 text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">
+                <div className="bg-indigo-50 rounded-lg p-3 sm:p-5 text-center shadow-sm">
+                  <div className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1">
                     10K+
                   </div>
-                  <div className="text-xs sm:text-sm text-slate-200 font-light">
+                  <div className="text-xs sm:text-sm text-slate-600 font-light">
                     CVs Processed
                   </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-5 text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">
+                <div className="bg-indigo-50 rounded-lg p-3 sm:p-5 text-center shadow-sm">
+                  <div className="text-2xl sm:text-3xl font-bold text-indigo-600 mb-1">
                     80%
                   </div>
-                  <div className="text-xs sm:text-sm text-slate-200 font-light">
+                  <div className="text-xs sm:text-sm text-slate-600 font-light">
                     Time Saved
                   </div>
                 </div>
@@ -370,35 +374,51 @@ const Home: React.FC = () => {
         </section>
 
         {/* Testimonials/CTA Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 tracking-tight">
+        <section className="py-12 sm:py-16 md:py-20 bg-white text-slate-800 relative overflow-hidden">
+          {/* Grid pattern background */}
+          <div className="absolute inset-0">
+            <div
+              className="absolute inset-0 opacity-[0.15]"
+              style={{
+                backgroundImage: `
+                  linear-gradient(to bottom, rgba(124, 58, 237, 0.5) 1px, transparent 1px),
+                  linear-gradient(to right, rgba(124, 58, 237, 0.5) 1px, transparent 1px)
+                `,
+                backgroundSize: "30px 30px",
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%)",
+              }}
+            ></div>
+          </div>
+
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 tracking-tight text-slate-800">
               Ready to Transform Your Hiring Process?
             </h2>
 
             <div className="max-w-3xl mx-auto mb-10 sm:mb-12">
               <ul className="space-y-3 sm:space-y-4 text-left mb-8 sm:mb-10 px-2 sm:px-4">
                 <li className="flex items-start">
-                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base font-light">
+                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-600 font-light">
                     Save 80% of your screening time with AI-powered analysis
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base font-light">
+                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-600 font-light">
                     Identify the best candidates with 95% accuracy
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base font-light">
+                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-600 font-light">
                     Reduce hiring bias and improve workforce diversity
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base font-light">
+                  <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-600 font-light">
                     Free 30-day trial with no credit card required
                   </span>
                 </li>
@@ -407,7 +427,7 @@ const Home: React.FC = () => {
 
             <Button
               size="lg"
-              className="bg-white text-indigo-900 hover:bg-slate-100 rounded-full px-6 sm:px-10 py-2 sm:py-6 text-sm sm:text-base md:text-lg font-['Rubik'] font-medium tracking-wide"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-6 sm:px-10 py-2 sm:py-6 text-sm sm:text-base md:text-lg font-['Rubik'] font-medium tracking-wide"
             >
               <Link to="/register">Start Free Trial</Link>
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

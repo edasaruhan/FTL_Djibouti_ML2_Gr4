@@ -8,12 +8,12 @@ import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 overflow-x-hidden font-['Poppins']">
+    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden font-['Poppins']">
       <Navbar />
 
       <main className="flex-1 overflow-x-hidden">
         {/* Hero Section - White background with purple grid */}
-        <section className="relative overflow-hidden bg-white text-indigo-900">
+        <section className="relative overflow-hidden bg-white dark:bg-slate-900 text-indigo-900 dark:text-indigo-100">
           {/* Grid pattern background */}
           <div className="absolute inset-0">
             <div
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
               className="w-full h-auto"
             >
               <path
-                fill="#f8fafc"
+                className="fill-slate-50 dark:fill-slate-800"
                 fillOpacity="1"
                 d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,229.3C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
@@ -123,13 +123,13 @@ const Home: React.FC = () => {
         </section>
 
         {/* Features Section - Clean cards with icons */}
-        <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-slate-800 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-slate-800 dark:text-slate-100 tracking-tight">
                 Why Choose CVision
               </h2>
-              <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto px-2 font-light">
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto px-2 font-light">
                 Our platform offers cutting-edge tools for job seekers and
                 recruiters
               </p>
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow"
               >
                 <div className="bg-cyan-50 p-3 sm:p-4 rounded-lg inline-block mb-4 sm:mb-5">
                   <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-cyan-500" />
@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow"
               >
                 <div className="bg-purple-50 p-3 sm:p-4 rounded-lg inline-block mb-4 sm:mb-5">
                   <Users className="h-6 w-6 sm:h-8 sm:w-8 text-purple-500" />
@@ -179,7 +179,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1 sm:mx-auto md:mx-0"
+                className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow sm:col-span-2 md:col-span-1 sm:mx-auto md:mx-0"
               >
                 <div className="bg-indigo-50 p-3 sm:p-4 rounded-lg inline-block mb-4 sm:mb-5">
                   <ScanEye className="h-6 w-6 sm:h-8 sm:w-8 text-indigo-500" />
@@ -197,7 +197,7 @@ const Home: React.FC = () => {
         </section>
 
         {/* How It Works - Modern step process with authentication */}
-        <section className="py-12 sm:py-16 md:py-20 bg-slate-50">
+        <section className="py-12 sm:py-16 md:py-20 bg-slate-50 dark:bg-slate-800">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-slate-800 tracking-tight">
@@ -236,17 +236,17 @@ const Home: React.FC = () => {
                     1
                   </div>
 
-                  {/* Mobile version - top down */}
-                  <div className="md:hidden bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  {/* Mobile version - top down - Step 1 */}
+                  <div className="md:hidden bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                     <div className="flex items-center mb-3">
                       <div className="bg-green-500 text-white rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center font-bold text-lg sm:text-xl mr-4 flex-shrink-0">
                         1
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200">
                         Create Account
                       </h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-600 pl-12 font-light">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 pl-12 font-light">
                       Sign up to access our CV screening service.
                     </p>
                   </div>
@@ -275,17 +275,17 @@ const Home: React.FC = () => {
                     2
                   </div>
 
-                  {/* Mobile version - top down */}
-                  <div className="md:hidden bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  {/* Mobile version - top down - Step 2 */}
+                  <div className="md:hidden bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                     <div className="flex items-center mb-3">
                       <div className="bg-indigo-500 text-white rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center font-bold text-lg sm:text-xl mr-4 flex-shrink-0">
                         2
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200">
                         Upload CVs
                       </h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-600 pl-12 font-light">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 pl-12 font-light">
                       Upload resumes in multiple formats (PDF, DOCX).
                     </p>
                   </div>
@@ -314,17 +314,17 @@ const Home: React.FC = () => {
                     3
                   </div>
 
-                  {/* Mobile version - top down */}
-                  <div className="md:hidden bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  {/* Mobile version - top down - Step 3 */}
+                  <div className="md:hidden bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                     <div className="flex items-center mb-3">
                       <div className="bg-cyan-500 text-white rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center font-bold text-lg sm:text-xl mr-4 flex-shrink-0">
                         3
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200">
                         Define Requirements
                       </h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-600 pl-12 font-light">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 pl-12 font-light">
                       Specify job skills and qualifications for AI matching.
                     </p>
                   </div>
@@ -353,17 +353,17 @@ const Home: React.FC = () => {
                     4
                   </div>
 
-                  {/* Mobile version - top down */}
-                  <div className="md:hidden bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+                  {/* Mobile version - top down - Step 4 */}
+                  <div className="md:hidden bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-700">
                     <div className="flex items-center mb-3">
                       <div className="bg-purple-500 text-white rounded-full h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center font-bold text-lg sm:text-xl mr-4 flex-shrink-0">
                         4
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800">
+                      <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200">
                         Review Results
                       </h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-600 pl-12 font-light">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 pl-12 font-light">
                       Get ranked candidates with detailed skill analysis.
                     </p>
                   </div>
@@ -374,7 +374,7 @@ const Home: React.FC = () => {
         </section>
 
         {/* Testimonials/CTA Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-white text-slate-800 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 relative overflow-hidden">
           {/* Grid pattern background */}
           <div className="absolute inset-0">
             <div
@@ -392,7 +392,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 tracking-tight text-slate-800">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 tracking-tight text-slate-800 dark:text-slate-100">
               Ready to Transform Your Hiring Process?
             </h2>
 
@@ -400,25 +400,25 @@ const Home: React.FC = () => {
               <ul className="space-y-3 sm:space-y-4 text-left mb-8 sm:mb-10 px-2 sm:px-4">
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-600 font-light">
+                  <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-light">
                     Save 80% of your screening time with AI-powered analysis
                   </span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-600 font-light">
+                  <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-light">
                     Identify the best candidates with 95% accuracy
                   </span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-600 font-light">
+                  <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-light">
                     Reduce hiring bias and improve workforce diversity
                   </span>
                 </li>
                 <li className="flex items-start">
                   <Check className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-600 font-light">
+                  <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-light">
                     Free 30-day trial with no credit card required
                   </span>
                 </li>

@@ -7,12 +7,12 @@ app = Flask(__name__)
 df = pd.read_csv('cv_unifie.csv')
 
 # Route principale : retourner toutes les données
-@app.route('/api/data', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_data():
     return jsonify(df.to_dict(orient='records'))
 
 # Route par ID
-@app.route('/api/data/<int:item_id>', methods=['GET'])
+@app.route('/<int:item_id>', methods=['GET'])
 def get_item(item_id):
     item = df[df['id'] == item_id]
     if not item.empty:

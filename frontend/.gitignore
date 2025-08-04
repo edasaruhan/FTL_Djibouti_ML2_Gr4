@@ -22,6 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< Updated upstream
 
 # Environment variables
 .env.local
+=======
+>>>>>>> Stashed changes

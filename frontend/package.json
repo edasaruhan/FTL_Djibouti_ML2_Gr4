@@ -10,11 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "@fontsource/poppins": "^5.2.6",
-    "@fontsource/rubik": "^5.2.5",
-=======
->>>>>>> Stashed changes
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.8",
@@ -26,12 +21,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
     "tailwind-merge": "^3.3.0",
-<<<<<<< Updated upstream
-    "tailwindcss": "^4.1.8",
-    "zod": "^3.25.56"
-=======
     "tailwindcss": "^4.1.8"
->>>>>>> Stashed changes
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
